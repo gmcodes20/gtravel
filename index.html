@@ -16,7 +16,8 @@
     <!-- CSS file -->
     <link rel="stylesheet" href="./css/style.css" />
 
-    <!-- GOOGLE FONTS -->
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon" />
   </head>
   <body>
     <!-- Header section -->
@@ -124,7 +125,7 @@
         </div>
       </section>
       <!-- DISCOVER SESSION -->
-      <div class="discover section" id="discover">
+      <section class="discover section" id="discover">
         <h2 class="section__title">
           Discover the most <br />attractive places
         </h2>
@@ -181,9 +182,315 @@
             </div>
           </div>
         </div>
-      </div>
-    </main>
+      </section>
 
+      <!-- EXPERIENCE -->
+
+      <section class="experience section">
+        <h2 class="section__title">
+          With Our Experience <br />
+          We Will Serve You
+        </h2>
+        <div class="experience__container container grid">
+          <div class="experience__content grid">
+            <div class="experience__data">
+              <h2 class="experience__number">20</h2>
+              <span class="experience_description"
+                >Years <br />
+                Experience</span
+              >
+            </div>
+            <div class="experience__data">
+              <h2 class="experience__number">86</h2>
+              <span class="experience_description"
+                >Complete <br />
+                Tours</span
+              >
+            </div>
+            <div class="experience__data">
+              <h2 class="experience__number">500+</h2>
+              <span class="experience_description"
+                >Tourist <br />
+                Destinations</span
+              >
+            </div>
+          </div>
+
+          <div class="experience__img grid">
+            <div class="experience__overlay">
+              <img
+                src="./img/experience1.jpg"
+                alt=""
+                class="experience__img-one"
+              />
+            </div>
+            <div class="experience__overlay">
+              <img
+                src="./img/experience2.jpg"
+                alt=""
+                class="experience__img-two"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- VIDEO SECTION -->
+      <section class="video section">
+        <h2 class="section__title">Video Tour</h2>
+
+        <div class="video__container container">
+          <p class="video__description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum itaque
+            numquam nihil, deleniti perspiciatis eligendi at. Sequi atque, nemo
+            vitae aliquam iste itaque modi ullam neque odit voluptatum nulla
+            voluptatibus.
+          </p>
+          <div class="video__content">
+            <video src="./video/video.mp4" id="video-file"></video>
+            <button class="button button--flex video__button" id="video-button">
+              <i class="ri-play-line video__button-icon" id="video_icon"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- PLACES -->
+      <section class="place section" id="place">
+        <h2 class="section__title">Choose Your Place</h2>
+        <div class="place__container container grid">
+          <!-- PLACES CARD 1 -->
+          <div class="place__card">
+            <img src="./img/place1.jpg" alt="" class="place__img" />
+
+            <div class="place__content">
+              <span class="place__rating">
+                <i class="ri-star-line place__rating-icon"></i>
+                <span class="place__rating-number">4.8</span>
+              </span>
+              <div class="place__data">
+                <h3 class="place__title">Elegusi</h3>
+                <span class="place__subtitle">UAR</span>
+                <span class="place__price">$500</span>
+              </div>
+            </div>
+            <button class="button button--flex place__button">
+              <i class="ri-arrow-right-line"></i>
+            </button>
+          </div>
+
+          <!-- PLACES CARD 2 -->
+          <div class="place__card">
+            <img src="./img/place2.jpg" alt="" class="place__img" />
+
+            <div class="place__content">
+              <span class="place__rating">
+                <i class="ri-star-line place__rating-icon"></i>
+                <span class="place__rating-number">5.0</span>
+              </span>
+              <div class="place__data">
+                <h3 class="place__title">Dubai</h3>
+                <span class="place__subtitle">UAE</span>
+                <span class="place__price">$2000</span>
+              </div>
+            </div>
+            <button class="button button--flex place__button">
+              <i class="ri-arrow-right-line"></i>
+            </button>
+          </div>
+
+          <!-- PLACES CARD 3 -->
+          <div class="place__card">
+            <img src="./img/place3.jpg" alt="" class="place__img" />
+
+            <div class="place__content">
+              <span class="place__rating">
+                <i class="ri-star-line place__rating-icon"></i>
+                <span class="place__rating-number">4.6</span>
+              </span>
+              <div class="place__data">
+                <h3 class="place__title">Hvar</h3>
+                <span class="place__subtitle">Croacia</span>
+                <span class="place__price">$1500</span>
+              </div>
+            </div>
+            <button class="button button--flex place__button">
+              <i class="ri-arrow-right-line"></i>
+            </button>
+          </div>
+
+          <!-- PLACES CARD 4 -->
+          <div class="place__card">
+            <img src="./img/place4.jpg" alt="" class="place__img" />
+
+            <div class="place__content">
+              <span class="place__rating">
+                <i class="ri-star-line place__rating-icon"></i>
+                <span class="place__rating-number">4.5</span>
+              </span>
+              <div class="place__data">
+                <h3 class="place__title">Jabi Lake</h3>
+                <span class="place__subtitle">Abuja</span>
+                <span class="place__price">$700</span>
+              </div>
+            </div>
+            <button class="button button--flex place__button">
+              <i class="ri-arrow-right-line"></i>
+            </button>
+          </div>
+
+          <!-- PLACES CARD 5 -->
+          <div class="place__card">
+            <img src="./img/place5.jpg" alt="" class="place__img" />
+
+            <div class="place__content">
+              <span class="place__rating">
+                <i class="ri-star-line place__rating-icon"></i>
+                <span class="place__rating-number">4.7</span>
+              </span>
+              <div class="place__data">
+                <h3 class="place__title">Bora Beach</h3>
+                <span class="place__subtitle">Indonasia</span>
+                <span class="place__price">$1700</span>
+              </div>
+            </div>
+            <button class="button button--flex place__button">
+              <i class="ri-arrow-right-line"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SUBSCRIBE -->
+
+      <section class="section subscribe">
+        <div class="subscribe__bg">
+          <div class="subscribe__container container">
+            <h2 class="section__title subscribe__title">
+              Subscribe to Our <br />
+              Newletter
+            </h2>
+            <p class="subscribe__description">
+              Subscribe to our weekly Newletter to get Update plus special
+              discounts
+            </p>
+
+            <form action="" class="subscribe__form">
+              <input
+                type="text"
+                class="subscribe__input"
+                placeholder="Enter email"
+              />
+              <button class="button">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- SPONSORS -->
+      <section class="section sponsor">
+        <div class="sponsor__container container grid">
+          <div class="sponsor__content">
+            <img src="./img/sponsors1.png" alt="" class="sponsor__img" />
+          </div>
+          <div class="sponsor__content">
+            <img src="./img/sponsors3.png" alt="" class="sponsor__img" />
+          </div>
+          <div class="sponsor__content">
+            <img src="./img/sponsors2.png" alt="" class="sponsor__img" />
+          </div>
+          <div class="sponsor__content">
+            <img src="./img/sponsors5.png" alt="" class="sponsor__img" />
+          </div>
+          <div class="sponsor__content">
+            <img src="./img/sponsors4.png" alt="" class="sponsor__img" />
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- FOOTER -->
+    <footer class="footer section">
+      <div class="footer__container container grid">
+        <div class="footer__content grid">
+          <div class="footer__data">
+            <h3 class="footer__title">GTravel</h3>
+            <p class="footer__description">
+              GTravel, choose your <br />
+              destination, we offer you the <br />experience
+            </p>
+
+            <div>
+              <a href="http://" target="_blank" class="footer__social"
+                ><i class="ri-facebook-box-fill"></i
+              ></a>
+              <a href="http://" target="_blank" class="footer__social"
+                ><i class="ri-twitter-fill"></i
+              ></a>
+              <a href="http://" target="_blank" class="footer__social"
+                ><i class="ri-instagram-fill"></i
+              ></a>
+              <a href="http://" target="_blank" class="footer__social"
+                ><i class="ri-youtube-fill"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="footer__data">
+            <h3 class="footer__subtitle">About</h3>
+            <ul>
+              <li class="footer__item">
+                <a href="#" class="footer__link">About Us</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Features</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">News & Blog</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__data">
+            <h3 class="footer__subtitle">Company</h3>
+            <ul>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Team</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Plans and Pricing</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Become a member</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__data">
+            <h3 class="footer__subtitle">Support</h3>
+            <ul>
+              <li class="footer__item">
+                <a href="#" class="footer__link">FAQs</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Support Center</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__rights">
+          <p class="footer__copy">&#169; 2021 gmcodes. all rights reserved</p>
+          <div class="footer__terms">
+            <a href="#" class="footer__terms-link">Terms and Agreement</a
+            ><a href="#" class="footer__terms-link">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- SCROLL UP -->
+    <!-- SCROLL REVEAL -->
     <!-- SWIPER JS -->
     <script src="./js/swiper-bundle.min.js"></script>
 

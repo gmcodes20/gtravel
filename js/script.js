@@ -53,3 +53,31 @@ var swiper = new Swiper(".discover__container", {
     rotate: 0,
   },
 });
+
+const videoFile = document.getElementById("video-file"),
+  videoButton = document.getElementById("video-button"),
+  videoIcon = document.getElementById("video_icon");
+
+function playPause() {
+  if (videoFile.paused) {
+    // Play Video
+    videoFile.play();
+    // change the icon
+    videoIcon.classList.add("ri-pause-line");
+    videoIcon.classList.remove("ri-play-line");
+  } else {
+    videoFile.pause();
+    // change the icon
+    videoIcon.classList.add("ri-play-line");
+    videoIcon.classList.remove("ri-pause-line");
+  }
+}
+
+videoButton.addEventListener("click", playPause);
+
+function videoEnded() {
+  videoIcon.classList.add("ri-play-line");
+  videoIcon.classList.remove("ri-pause-line");
+}
+
+videoFile.addEventListener("ended", videoEnded);
