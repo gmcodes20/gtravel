@@ -81,3 +81,119 @@ function videoEnded() {
 }
 
 videoFile.addEventListener("ended", videoEnded);
+
+// SHOW SCROLL UP
+function scrollUp() {
+  const scrollUp = document.getElementById("scroll-up");
+  // reveal scroll up button when the scroll is higher than 200vh
+  if (this.scrollY >= 200) {
+    scrollUp.classList.add("show-scroll");
+  } else {
+    scrollUp.classList.remove("show-scroll");
+  }
+}
+
+window.addEventListener("scroll", scrollUp);
+
+// SCROLL SECTION ACTIVE LINK
+const sections = document.querySelectorAll("section[id]");
+
+function scrollActive() {
+  const scrollY = window.pageYOffset;
+
+  sections.forEach((current) => {
+    const sectionHeight = current.offsetHeight;
+    const sectionTop = current.offsetTop - 60;
+    sectionId = current.getAttribute("id");
+
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      document
+        .querySelector(".nav__menu a[href*=" + sectionId + "]")
+        .classList.add("active-link");
+    } else {
+      document
+        .querySelector(".nav__menu a[href*=" + sectionId + "]")
+        .classList.remove("active-link");
+    }
+  });
+}
+
+window.addEventListener("scroll", scrollActive);
+
+// DARK AND LIGHT THEME
+const themeButton = document.getElementById("theme-button");
+const darkTheme = "dark-theme";
+const iconTheme = "ri-sun-line";
+
+// previosly selected theme
+const selectedTheme = localStorage.getItem("selected-theme");
+const selectedIcon = localStorage.getItem("selected-icon");
+
+// Obtain the current theme that the interface has by validating the dark-theme class
+
+const getCurrentTheme = () =>
+  document.body.classList.contains(darkTheme) ? "dark" : "light";
+const getCurrentIcon = () =>
+  themeButton.classList.contains(iconTheme) ? "ri-moon-line" : "ri-sun-line";
+
+// validate if the previous user previously choosed a theme
+if (selectedTheme) {
+  // check if dark theme was activated or deactivated
+  document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
+    darkTheme
+  );
+  document.body.classList[selectedTheme === "ri-moon-line" ? "add" : "remove"](
+    iconTheme
+  );
+}
+
+// Activate and Deactivate the theme with the button
+themeButton.addEventListener("click", () => {
+  // add or remove the dark icon theme
+  document.body.classList.toggle(darkTheme);
+  themeButton.classList.toggle(iconTheme);
+  // relay the chosen theme and icon to localstorage
+  localStorage.setItem("selected-theme", getCurrentTheme());
+  localStorage.setItem("selected-icon", getCurrentIcon());
+});
+
+// SCROLL REVEAL
+const sr = ScrollReveal({
+  distance: "60px",
+  duration: 2800,
+  reset: true,
+});
+
+sr.reveal(
+  ` .home__data, 
+    .home__social-link, 
+    .hime__info, 
+    .discover__container, 
+    .experience__data,
+    .expereince__overlay,
+    .place__card,
+    .sponsor__content,
+    .footer__data, .footer__rights,`,
+  {
+    origin: "top",
+    interval: 100,
+  }
+);
+sr.reveal(
+  ` .about__data,
+    .video__description,
+    .subscribe__description,
+            `,
+  {
+    origin: "left",
+  }
+);
+sr.reveal(
+  ` .about__img-overlay, 
+    .video__content,
+    .subscribe__form`,
+  {
+    origin: "right",
+    interval: 100,
+  }
+);
